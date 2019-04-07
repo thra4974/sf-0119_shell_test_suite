@@ -1,6 +1,6 @@
 # Configuration file
 
-TESTDIR="."
+TESTDIR="/home/vagrant/sf-0119_shell_test_suite/Tests"
 R=$RANDOM
 OUTPUTFILE="checker_output_$R"
 ERROROUTPUTFILE="checker_error_output_$R"

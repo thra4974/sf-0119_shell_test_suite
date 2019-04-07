@@ -51,7 +51,7 @@ function stop_shell()
 }
 
 # Load configuration
-source config
+source ~/sf-0119_shell_test_suite/config
 
 # Cleanup
 echo -ne "\033[37m"
