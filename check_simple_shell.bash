@@ -59,7 +59,7 @@ rm -f $OUTPUTFILE $LTRACEOUTPUTFILE
 
 mkdir $SAVEOUTPUTDIR 2>/dev/null
 # Locates all tests and launch them
-for dir in `find . -regex "./[0-9].*" -type d`
+for dir in `find . -regex "./[0-9].*" -type d | sort`
 do
     echo "> $dir"
     for testname in `ls "$dir" | grep -v "~$"`
