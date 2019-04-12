@@ -4,6 +4,7 @@
 
 command="pwd"
 tmp_file="checker_tmp_file_$RANDOM"
+save_file=`echo $BASH_SOURCE | sed -e 's/\.\///g' -e 's/\//#/g'`
 
 # clean up
 stop_shell
@@ -22,6 +23,9 @@ PATH="$OLDPATH"
 
 # wait a little bit
 $SLEEP $SLEEPSECONDS
+
+# copy saved output for debugging
+cat $OUTPUTFILE > "$SAVEOUTPUTDIR/$save_file"
 
 # check the result
 res=`$CAT "$OUTPUTFILE"`
