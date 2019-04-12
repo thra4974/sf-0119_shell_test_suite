@@ -4,6 +4,7 @@ TESTDIR="."
 R=$RANDOM
 OUTPUTFILE="checker_output_$R"
 ERROROUTPUTFILE="checker_error_output_$R"
+SAVEOUTPUTDIR="./out"
 SHELL="./simple_shell"
 #SHELL="/bin/sh"
 SLEEP=`which sleep`
@@ -17,3 +18,4 @@ WC=`which wc`
 RM=`which rm`
 TOUCH=`which touch`
 CHMOD=`which chmod`
+
