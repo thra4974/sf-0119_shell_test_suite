@@ -17,7 +17,7 @@ OLDPATH="$PATH"
 PATH=":$PATH"
 # send commands
 $ECHO "$command" | $SHELL > $OUTPUTFILE 2> $ERROROUTPUTFILE &
-
+cat $OUTPUTFILE >ls.out
 # put PATH back
 PATH="$OLDPATH"
 
