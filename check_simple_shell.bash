@@ -57,14 +57,15 @@ source config
 echo -ne "\033[37m"
 rm -f $OUTPUTFILE $LTRACEOUTPUTFILE
 
+mkdir $SAVEOUTPUTDIR 2>/dev/null
 # Locates all tests and launch them
-for dir in `ls -d "$TESTDIR"/*/`
+for dir in `find . -regex "./[0-9].*" -type d | sort`
 do
     echo "> $dir"
     for testname in `ls "$dir" | grep -v "~$"`
     do
 	   echo -n "   # $testname: "
-	   source "$dir$testname"
+	   source "$dir/$testname"
     done
 done
 
@@ -73,4 +74,4 @@ rm -f $OUTPUTFILE $LTRACEOUTPUTFILE $ERROROUTPUTFILE
 rm -f checker_output_*
 rm -f checker_tmp_file_*
 rm -f /tmp/.checker_tmp_file_*
-echo -ne "\033[37m"
+echo -ne "\033[37m\033[0m"
