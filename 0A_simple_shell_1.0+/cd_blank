@@ -2,7 +2,8 @@
 #
 # simple test with cd to check changing to home directory with no arguement
 
-command="cd;pwd"
+command="cd
+pwd"
 tmp_file="checker_tmp_file_$RANDOM"
 save_file=`echo $BASH_SOURCE | sed -e 's/\.\///g' -e 's/\//#/g'`
 

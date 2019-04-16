@@ -2,7 +2,9 @@
 #
 # simple test with cd to check changing to previous directory
 
-command="cd /tmp ; cd -"
+command="cd /tmp
+cd /bin
+cd -"
 tmp_file="checker_tmp_file_$RANDOM"
 save_file=`echo $BASH_SOURCE | sed -e 's/\.\///g' -e 's/\//#/g'`
 
@@ -23,7 +25,7 @@ cat $OUTPUTFILE > "$SAVEOUTPUTDIR/$save_file"
 
 # check the result
 nmatch=`cat $OUTPUTFILE | grep -c "/tmp"`
-if [ $nmatch -eq 0 ]; then
+if [ $nmatch -eq 1 ]; then
 	   print_ok
 else
 	   print_ko
