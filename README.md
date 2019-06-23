@@ -6,7 +6,7 @@ This repository contains test cases written in Bash for Holberton School's Shell
 
 ## Usage 
 ```sh
-./check_simple_shell.bash`
+./check_simple_shell.bash
 ```
 
 ## Author
